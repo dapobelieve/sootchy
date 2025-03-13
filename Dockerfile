@@ -8,9 +8,7 @@ RUN npm install
 
 COPY . .
 
-COPY ./scripts /usr/local/bin/
-
-RUN chmod +x -R /usr/local/bin
+RUN chmod +x -R ./scripts/start.sh
 
 EXPOSE 80
 
