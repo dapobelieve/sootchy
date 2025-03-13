@@ -1,16 +1,13 @@
 services:
   node-app:
-    build:
-      context: . # looks for the default 'Dockerfile' to use as the image for this service
-      # dockerfile: Dockerfile.old
-    # image: node-app:latest
-    # before this service starts, the services listed
-    # should be running because this service 'depends on'
-    # them
+    # build:
+    #   context: .
+    #   # dockerfile: Dockerfile.old
+    image: 488626125052.dkr.ecr.eu-west-1.amazonaws.com/node-app:latest
     depends_on:
       - postgres-db
     restart: "always"
-    container_name: alt-sch-node-app
+    container_name: node-app
     environment:
       DB_HOST: "postgres-db"
       DB_USER: "kamdi"
