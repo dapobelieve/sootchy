@@ -25,8 +25,8 @@ services:
   postgres-db:
     image: postgres:17.2
     container_name: alt-sch-postgres-db
-    # ports:
-    #   - 5030:5432
+    ports:
+      - 5030:5432
     environment:
       POSTGRES_DB: "demo"
       POSTGRES_USER: kamdi
