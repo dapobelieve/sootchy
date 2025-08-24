@@ -13,9 +13,7 @@ echo "Database Seeders ✅"
 
 npm install
 
-
 npm uninstall bcrypt
-
 
 npm install bcrypt
 

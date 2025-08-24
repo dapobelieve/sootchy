@@ -8,10 +8,10 @@ RUN npm install
 
 COPY . .
 
-COPY ./scripts /usr/local/bin/
+RUN chmod +x  ./scripts/start.sh
 
-RUN chmod +x -R /usr/local/bin
+RUN ls -la
 
 EXPOSE 80
 
-ENTRYPOINT ["start.sh", "$NODE_ENV"]
+ENTRYPOINT ["./scripts/start.sh"]
