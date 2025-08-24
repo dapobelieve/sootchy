@@ -1,9 +1,9 @@
 services:
   node-app:
-    # build:
-    #   context: .
-    #   # dockerfile: Dockerfile.old
-    image: 488626125052.dkr.ecr.eu-west-1.amazonaws.com/node-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: 488626125052.dkr.ecr.eu-west-1.amazonaws.com/node-app:latest
     depends_on:
       - postgres-db
     restart: "always"
@@ -17,9 +17,9 @@ services:
       PORT: 5002
     ports:
       - 8081:5002
-    volumes:
-      - .:/www/app
-      # - /www/app/node_modules
+    # volumes:
+    # - .:/www/app
+    # - /www/app/node_modules
     networks:
       - altsch-network
   postgres-db:
