@@ -1,0 +1,5 @@
+name: Test my deployments
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  pull_request:
+    types: [opened, reopened]
